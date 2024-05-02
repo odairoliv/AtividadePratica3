@@ -35,13 +35,18 @@ public class Desenvolvedor extends Funcionario{
 
     @Override
     public void relatarProgresso() {
-        System.out.println("Progresso relatado pelo desenvolvedor " + getNome());
+        System.out.println("Progresso relatado para o(a) desenvolvedor(a) " + getNome());
     }
 
     @Override
     public float calcularSalario() {
         salarioFinal = salarioHora * getHorasTrabalhadas();
         return salarioFinal;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nEspecialidade: " + especialidade;
     }
     
 }

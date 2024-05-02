@@ -41,4 +41,9 @@ public abstract class Funcionario implements Trabalhavel {
     }
 
     public abstract float calcularSalario();
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "\nMatrícula: " + matricula + "\nSalário: " + calcularSalario();
+    }
 }

@@ -19,13 +19,18 @@ public class Estagiario extends Funcionario{
 
     @Override
     public void relatarProgresso() {
-        System.out.println("Progresso relatado pelo estagiário " + getNome());
+        System.out.println("Progresso relatado para o(a) estagiário(a) " + getNome());
     }
 
     @Override
     public float calcularSalario() {
         salarioFinal = salarioHora * getHorasTrabalhadas();
         return salarioFinal;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSupervisor: " + supervisor;
     }
 
 

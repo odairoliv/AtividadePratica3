@@ -45,13 +45,18 @@ public class Gerente extends Funcionario{
 
     @Override
     public void relatarProgresso() {
-        System.out.println("Progresso relatado pelo(a) gerente " + getNome());
+        System.out.println("Progresso relatado para o(a) gerente " + getNome());
     }
 
     @Override
     public float calcularSalario() {
         salarioFinal = getHorasTrabalhadas() * salarioHora + bonus;
         return salarioFinal;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nEquipe: " + equipe;
     }
 
     
