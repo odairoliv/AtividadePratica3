@@ -6,16 +6,14 @@ public abstract class Funcionario implements Trabalhavel {
     private String nome;
     private int matricula;
     private int horasTrabalhadas;
-    private float salarioHora;
 
     public Funcionario() {
     }
 
-    public Funcionario(String nome, int matricula, int horasTrabalhadas, float salarioHora) {
+    public Funcionario(String nome, int matricula, int horasTrabalhadas) {
         this.nome = nome;
         this.matricula = matricula;
         this.horasTrabalhadas = horasTrabalhadas;
-        this.salarioHora = salarioHora;
     }
 
     public String getNome() {
@@ -40,14 +38,6 @@ public abstract class Funcionario implements Trabalhavel {
 
     public void setHorasTrabalhadas(int horasTrabalhadas) {
         this.horasTrabalhadas = horasTrabalhadas;
-    }
-
-    public float getSalarioHora() {
-        return salarioHora;
-    }
-
-    public void setSalarioHora(float salarioHora) {
-        this.salarioHora = salarioHora;
     }
 
     public abstract float calcularSalario();

@@ -5,11 +5,13 @@ public class Gerente extends Funcionario{
     private float bonus;
     private float salarioFinal;
     private String equipe;
+    private float salarioHora;
 
-    public Gerente(String nome, int matricula, int horasTrabalhadas, float salarioHora, float bonus, String equipe) {
-        super(nome, matricula, horasTrabalhadas, salarioHora);
+    public Gerente(String nome, int matricula, int horasTrabalhadas, float bonus, String equipe, float salarioHora) {
+        super(nome, matricula, horasTrabalhadas);
         this.bonus = bonus;
         this.equipe = equipe;
+        this.salarioHora = 105f;
     }
 
     public float getBonus() {
@@ -28,6 +30,14 @@ public class Gerente extends Funcionario{
         this.equipe = equipe;
     }
 
+    public float getSalarioFinal() {
+        return salarioFinal;
+    }
+
+    public void setSalarioFinal(float salarioFinal) {
+        this.salarioFinal = salarioFinal;
+    }
+
     @Override
     public void trabalhar() {
         System.out.println("Gerente " + getNome() + " está coordenando a equipe " + equipe);
@@ -40,7 +50,7 @@ public class Gerente extends Funcionario{
 
     @Override
     public float calcularSalario() {
-        salarioFinal = getHorasTrabalhadas() * getSalarioHora() + bonus;
+        salarioFinal = getHorasTrabalhadas() * salarioHora + bonus;
         return salarioFinal;
     }
 
